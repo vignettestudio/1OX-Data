@@ -8,14 +8,16 @@
     body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; text-align: left; }
     h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; text-align: center; }
     h2 { color: #007bff; margin-top: 30px; font-size: 1.2em; border-left: 5px solid #007bff; padding-left: 10px; }
+    h3 { font-size: 1.1em; color: #444; margin-top: 20px; }
     .btn-group { margin-bottom: 30px; text-align: center; position: sticky; top: 0; background: white; padding: 10px 0; z-index: 100; border-bottom: 1px solid #eee; }
-    .btn { display: inline-block; padding: 10px 15px; margin: 2px; border: 1px solid #ddd; border-radius: 20px; cursor: pointer; background-color: #f9f9f9; font-weight: bold; text-decoration: none; color: #555; transition: 0.2s; font-size: 0.9em; }
+    .btn { display: inline-block; padding: 10px 15px; margin: 2px; border: 1px solid #ddd; border-radius: 20px; cursor: pointer; background-color: #f9f9f9; font-weight: bold; text-decoration: none; color: #555; transition: 0.2s; font-size: 0.85em; }
     .btn.active { background-color: #007bff !important; color: white !important; border-color: #007bff !important; }
     .content-section { display: none; } 
     .footer-home { margin-top: 50px; text-align: center; padding: 20px; border-top: 1px solid #eee; }
     a { color: #007bff; text-decoration: none; }
     ul { padding-left: 20px; }
     li { margin-bottom: 8px; }
+    .highlight { background-color: #fff3cd; padding: 2px 5px; border-radius: 3px; font-weight: bold; }
 </style>
 <script>
     function showLang(langId) {
@@ -46,80 +48,80 @@
     <a id="btn-es" class="btn" onclick="showLang('es')">Español</a>
 </div>
 
-<div id="en" class="content-section">
-    <h1>Privacy Policy (1OX)</h1>
-    <p><strong>Effective Date:</strong> 2026-02-17</p>
-    <p><strong>Vignette Studio</strong> ("we") provides this policy for <strong>1OX</strong>.</p>
-    <h2>1. Information We Collect</h2>
-    <ul>
-        <li><strong>Logins:</strong> Google ID (Sign-in) or Unique Guest ID (Guest).</li>
-        <li><strong>In-App Purchases:</strong> Order ID and Receipt data for Ad-free or paid items. We do not store credit card numbers.</li>
-        <li><strong>Ads:</strong> Ad identifiers for rewards and personalized ads via Unity/Google.</li>
-    </ul>
-    <h2>2. Data Deletion</h2>
-    <p>To delete your account and purchase history, contact <strong>vignettemanager@gmail.com</strong>.</p>
-</div>
-
 <div id="ko" class="content-section">
     <h1>개인정보 처리방침 (1OX)</h1>
     <p><strong>시행일:</strong> 2026년 2월 17일</p>
-    <p>본 방침은 <strong>Vignette Studio</strong>가 제공하는 <strong>1OX</strong> 게임에 적용됩니다.</p>
-    <h2>1. 수집 정보 및 방법</h2>
+    <p>Vignette Studio(이하 '당사')는 사용자의 개인정보를 소중히 여기며, 모바일 게임 <strong>1OX</strong>와 관련하여 개인정보 보호법 및 관련 법령을 준수합니다.</p>
+
+    <h2>1. 수집하는 개인정보 항목 및 방법</h2>
     <ul>
-        <li><strong>로그인:</strong> Google 계정 식별정보 또는 기기 고유 ID(게스트 로그인).</li>
-        <li><strong>결제 서비스:</strong> 인앱 결제(광고 제거, 유료 아이템) 시 결제 영수증 및 주문 번호를 수집하여 아이템을 지급합니다.</li>
-        <li><strong>광고:</strong> 무료 보상형 광고 시청 및 맞춤형 광고를 위해 광고 식별자를 사용합니다.</li>
+        <li><strong>로그인 서비스:</strong> Google 로그인을 통한 사용자 식별 고유 ID 및 닉네임, 또는 게스트 이용 시 기기 식별 고유 ID.</li>
+        <li><strong>인앱 결제:</strong> 유료 아이템(광고 제거 등) 구매 시 결제 영수증 및 주문 번호(Google Play 제공). <span class="highlight">당사는 사용자의 신용카드 번호 등 금융 정보를 직접 수집하거나 저장하지 않습니다.</span></li>
+        <li><strong>광고 및 통계:</strong> 광고 식별자(ADID/IDFA) 및 서비스 이용 기록(Unity Analytics 등).</li>
     </ul>
-    <h2>2. 데이터 삭제 요청</h2>
-    <p>계정 및 유료 아이템 정보를 포함한 모든 데이터의 영구 삭제를 원하실 경우 <strong>vignettemanager@gmail.com</strong>으로 문의해 주십시오.</p>
+
+    <h2>2. 개인정보의 이용 목적</h2>
+    <ul>
+        <li>사용자 식별 및 게임 데이터(퀴즈 진행도, 점수) 저장 및 복구.</li>
+        <li>글로벌 랭킹 시스템 운영 및 표시.</li>
+        <li>구매한 유료 콘텐츠 지급 및 광고 제거 권한 관리.</li>
+        <li>보상형 광고 제공 및 서비스 개선을 위한 통계 분석.</li>
+    </ul>
+
+    <h2>3. 제3자 서비스 제공 및 위탁</h2>
+    <p>서비스 제공을 위해 아래와 같은 외부 업체의 도구를 사용하며, 해당 업체들은 각자의 방침에 따라 데이터를 처리할 수 있습니다.</p>
+    <ul>
+        <li><strong>Google Play Services:</strong> 로그인 및 랭킹 관리.</li>
+        <li><strong>Unity Ads / Google AdMob:</strong> 보상형 광고 송출.</li>
+        <li><strong>Unity Analytics:</strong> 서비스 이용 통계 분석.</li>
+    </ul>
+
+    <h2>4. 개인정보의 보유 및 파기</h2>
+    <p>원칙적으로 서비스 탈퇴 시 또는 목적 달성 시 개인정보를 지체 없이 파기합니다. <span class="highlight">삭제 요청 시 30일 이내에 모든 데이터를 서버에서 영구 삭제합니다.</span></p>
+
+    <h2>5. 아동 보호 정책 (COPPA 준수)</h2>
+    <p>당사는 만 13세 미만 아동의 개인정보를 고의로 수집하지 않습니다. 만약 아동의 정보가 수집된 사실을 인지할 경우 즉시 파기 조치합니다.</p>
+
+    <h2>6. 문의 및 데이터 삭제 신청</h2>
+    <p>데이터 확인 또는 삭제 요청은 아래 이메일로 연락 주시기 바랍니다.</p>
+    <p><strong>Email:</strong> <a href="mailto:vignettemanager@gmail.com">vignettemanager@gmail.com</a></p>
 </div>
 
-<div id="ja" class="content-section">
-    <h1>プライバシーポリシー (1OX)</h1>
-    <h2>1. 収集する情報</h2>
-    <ul>
-        <li><strong>ログイン:</strong> Googleアカウントまたはゲストログイン用ID。</li>
-        <li><strong>アプリ内課金:</strong> 広告削除や有料アイテム購入時の注文番号。</li>
-        <li><strong>広告:</strong> Unity Ads/Google AdMobによる広告識別子の使用。</li>
-    </ul>
-    <h2>2. 削除リクエスト</h2>
-    <p>データ削除は <strong>vignettemanager@gmail.com</strong> までご連絡ください。</p>
-</div>
+<div id="en" class="content-section">
+    <h1>Privacy Policy (1OX)</h1>
+    <p><strong>Effective Date:</strong> February 17, 2026</p>
+    <p>Vignette Studio ("we," "us," or "our") is committed to protecting your privacy regarding our mobile game <strong>1OX</strong>.</p>
 
-<div id="tw" class="content-section">
-    <h1>隱私權政策 (1OX)</h1>
-    <h2>1. 收集的資訊</h2>
+    <h2>1. Information We Collect</h2>
     <ul>
-        <li><strong>登入方式:</strong> Google 帳戶或賓客登入唯一 ID。</li>
-        <li><strong>內購項目:</strong> 處理廣告移除或付費道具時的訂單編號。</li>
-        <li><strong>廣告服務:</strong> 使用廣告識別碼提供獎勵式廣告。</li>
+        <li><strong>Logins:</strong> Unique ID and nickname via Google Sign-In, or a unique device ID for guest users.</li>
+        <li><strong>In-app Purchases:</strong> Transaction receipts and order IDs provided by Google Play for items such as "Ad Removal." <span class="highlight">We do not store or collect your credit card or financial information directly.</span></li>
+        <li><strong>Ads & Analytics:</strong> Advertising identifiers (ADID/IDFA) and usage logs via Unity Analytics.</li>
     </ul>
-    <h2>2. 數據刪除</h2>
-    <p>如需刪除帳號及數據，請聯繫 <strong>vignettemanager@gmail.com</strong>。</p>
-</div>
 
-<div id="cn" class="content-section">
-    <h1>隐私政策 (1OX)</h1>
-    <h2>1. 收集的信息</h2>
+    <h2>2. Purpose of Use</h2>
     <ul>
-        <li><strong>登录方式:</strong> Google 账户或游客登录唯一 ID。</li>
-        <li><strong>内购项目:</strong> 处理广告移除或付费道具时的订单编号。</li>
-        <li><strong>广告服务:</strong> 使用广告识别码提供奖励式广告。</li>
+        <li>Account management and game data restoration (quiz progress, scores).</li>
+        <li>Global leaderboard operation.</li>
+        <li>Managing purchased content and ad-free permissions.</li>
+        <li>Statistical analysis for service improvement.</li>
     </ul>
-    <h2>2. 数据删除</h2>
-    <p>如需删除账号及数据，请联系 <strong>vignettemanager@gmail.com</strong>。</p>
-</div>
 
-<div id="es" class="content-section">
-    <h1>Política de Privacidad (1OX)</h1>
-    <h2>1. Información recopilada</h2>
+    <h2>3. Third-Party Services</h2>
     <ul>
-        <li><strong>Inicios de sesión:</strong> Google ID o ID de invitado único.</li>
-        <li><strong>Compras:</strong> Identificadores de pedido para la eliminación de anuncios y artículos pagados.</li>
-        <li><strong>Anuncios:</strong> Identificadores de anuncios para recompensas a través de Unity/Google.</li>
+        <li><strong>Google Play Services:</strong> Login and leaderboards.</li>
+        <li><strong>Unity Ads / Google AdMob:</strong> Rewarded advertisements.</li>
+        <li><strong>Unity Analytics:</strong> Usage statistics.</li>
     </ul>
-    <h2>2. Eliminación de datos</h2>
-    <p>Contáctenos en <strong>vignettemanager@gmail.com</strong> para solicitar la eliminación.</p>
+
+    <h2>4. Data Retention and Deletion</h2>
+    <p>Data is deleted upon account termination. <span class="highlight">Upon request, we will permanently delete all data within 30 days.</span></p>
+
+    <h2>5. Children's Privacy (COPPA)</h2>
+    <p>We do not knowingly collect information from children under 13. If we discover such data has been collected, it will be deleted immediately.</p>
+
+    <h2>6. Contact Us</h2>
+    <p>For data inquiries or deletion requests, contact: <strong>vignettemanager@gmail.com</strong></p>
 </div>
 
 <div class="footer-home">
