@@ -5,18 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vignette Studio</title>
 <style>
+    /* 전체 스타일 */
     body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; text-align: center; }
+    
+    /* 로고/제목 스타일 */
     h1 { margin-top: 40px; margin-bottom: 10px; color: #222; }
     .slogan { color: #666; font-style: italic; margin-bottom: 30px; }
+    
+    /* 버튼 그룹 */
     .btn-group { margin-bottom: 40px; }
-    .btn { display: inline-block; padding: 8px 16px; margin: 4px; border: 1px solid #ddd; border-radius: 20px; cursor: pointer; background-color: #f9f9f9; color: #555; font-weight: bold; text-decoration: none; transition: 0.2s; }
+    .btn { 
+        display: inline-block; padding: 8px 16px; margin: 4px; 
+        border: 1px solid #ddd; border-radius: 20px; cursor: pointer; 
+        background-color: #f9f9f9; color: #555; font-weight: bold; text-decoration: none; transition: 0.2s;
+    }
     .btn:hover { background-color: #eee; }
     .btn.active { background-color: #007bff !important; color: white !important; border-color: #007bff !important; }
-    .game-img { max-width: 100%; height: auto; max-height: 600px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px 0; }
+
+    /* 이미지 스타일 */
+    .game-img { 
+        max-width: 100%; height: auto; max-height: 600px; 
+        border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        margin: 20px 0;
+    }
+
+    /* 내용 섹션 */
     .content-section { display: none; text-align: left; }
-    .game-header { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+    
+    /* 제목과 배지 정렬용 스타일 */
+    .game-header {
+        border-bottom: 2px solid #eee; 
+        padding-bottom: 10px; 
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
     ul { margin-bottom: 30px; }
     li { margin-bottom: 10px; }
+    
+    /* 하단 링크 */
     .footer-links { margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9em; text-align: center; }
     a { color: #007bff; text-decoration: none; }
 </style>
@@ -26,8 +56,10 @@
         for (var i = 0; i < contents.length; i++) { contents[i].style.display = 'none'; }
         var buttons = document.getElementsByClassName('btn');
         for (var i = 0; i < buttons.length; i++) { buttons[i].classList.remove('active'); }
+        
         var targetContent = document.getElementById(langId);
         var targetButton = document.getElementById('btn-' + langId);
+        
         if (targetContent) targetContent.style.display = 'block';
         if (targetButton) targetButton.classList.add('active');
     }
@@ -51,7 +83,7 @@
     <p>Strategic explosions on a chessboard!</p>
     <h2 class="game-header">🎮 Project: 1OX <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
     <p>The ultimate brain challenge through quizzes!</p>
-    <div class="footer-links">Contact: vignettemanager@gmail.com | <a href="PRIVACY.html">Privacy Policy</a></div>
+    <div class="footer-links">Contact: vignettemanager@gmail.com | <a href="PRIVACY.html?lang=en">Privacy Policy</a></div>
 </div>
 
 <div id="ko" class="content-section">
@@ -60,7 +92,7 @@
     <p>체스보드 위에서 펼쳐지는 전략적인 폭발 퍼즐!</p>
     <h2 class="game-header">🎮 프로젝트: 1OX <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
     <p>퀴즈로 즐기는 최고의 두뇌 챌린지!</p>
-    <div class="footer-links">문의: vignettemanager@gmail.com | <a href="PRIVACY.html">개인정보 처리방침</a></div>
+    <div class="footer-links">문의: vignettemanager@gmail.com | <a href="PRIVACY.html?lang=ko">개인정보 처리방침</a></div>
 </div>
 
 <div id="ja" class="content-section">
@@ -69,7 +101,7 @@
     <p>チェス盤の上で繰り広げられる戦略的爆発パズル！</p>
     <h2 class="game-header">🎮 1OX (ワンオーエックス) <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
     <p>クイズで楽しむ究極の脳トレチャレンジ！</p>
-    <div class="footer-links">メール: vignettemanager@gmail.com | <a href="PRIVACY.html">プライバシーポリシー</a></div>
+    <div class="footer-links">メール: vignettemanager@gmail.com | <a href="PRIVACY.html?lang=ja">プライバシーポリシー</a></div>
 </div>
 
 <div id="tw" class="content-section">
@@ -77,8 +109,8 @@
     <h2 class="game-header">🎮 Block Bomb (方塊炸彈) <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
     <p>棋盤上的策略爆炸益智遊戲！</p>
     <h2 class="game-header">🎮 1OX <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
-    <p>透過問답挑戰你的最強大腦！</p>
-    <div class="footer-links">郵箱: vignettemanager@gmail.com | <a href="PRIVACY.html">隱私政策</a></div>
+    <p>透過問答挑戰你的最強大腦！</p>
+    <div class="footer-links">郵箱: vignettemanager@gmail.com | <a href="PRIVACY.html?lang=tw">隱私政策</a></div>
 </div>
 
 <div id="cn" class="content-section">
@@ -87,7 +119,7 @@
     <p>棋盘上的策略爆炸益智游戏！</p>
     <h2 class="game-header">🎮 1OX <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
     <p>通过问答挑战你的最强大脑！</p>
-    <div class="footer-links">邮箱: vignettemanager@gmail.com | <a href="PRIVACY.html">隐私政策</a></div>
+    <div class="footer-links">邮箱: vignettemanager@gmail.com | <a href="PRIVACY.html?lang=cn">隐私政策</a></div>
 </div>
 
 <div id="es" class="content-section">
@@ -96,7 +128,7 @@
     <p>¡Explosiones estratégicas en un tablero de ajedrez!</p>
     <h2 class="game-header">🎮 Proyecto: 1OX <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
     <p>¡El desafío definitivo de preguntas para tu cerebro!</p>
-    <div class="footer-links">Email: vignettemanager@gmail.com | <a href="PRIVACY.html">Política de privacidad</a></div>
+    <div class="footer-links">Email: vignettemanager@gmail.com | <a href="PRIVACY.html?lang=es">Política de privacidad</a></div>
 </div>
 
 </body>
