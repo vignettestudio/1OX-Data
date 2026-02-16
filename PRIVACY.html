@@ -1,7 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    </head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - 1OX</title>
+<style>
+    body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; text-align: left; }
+    h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; text-align: center; }
+    h2 { color: #007bff; margin-top: 30px; font-size: 1.2em; border-left: 5px solid #007bff; padding-left: 10px; }
+    .btn-group { margin-bottom: 30px; text-align: center; position: sticky; top: 0; background: white; padding: 10px 0; z-index: 100; border-bottom: 1px solid #eee; }
+    .btn { display: inline-block; padding: 10px 15px; margin: 2px; border: 1px solid #ddd; border-radius: 20px; cursor: pointer; background-color: #f9f9f9; font-weight: bold; text-decoration: none; color: #555; transition: 0.2s; font-size: 0.85em; }
+    .btn.active { background-color: #007bff !important; color: white !important; border-color: #007bff !important; }
+    .content-section { display: none; } 
+    .footer-home { margin-top: 50px; text-align: center; padding: 20px; border-top: 1px solid #eee; }
+    a { color: #007bff; text-decoration: none; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    .highlight { background-color: #fff3cd; padding: 2px 5px; border-radius: 3px; font-weight: bold; }
+</style>
+<script>
+    function showLang(langId) {
+        var contents = document.getElementsByClassName('content-section');
+        for (var i = 0; i < contents.length; i++) { contents[i].style.display = 'none'; }
+        var buttons = document.getElementsByClassName('btn');
+        for (var i = 0; i < buttons.length; i++) { buttons[i].classList.remove('active'); }
+        var targetContent = document.getElementById(langId);
+        var targetButton = document.getElementById('btn-' + langId);
+        if (targetContent) targetContent.style.display = 'block';
+        if (targetButton) targetButton.classList.add('active');
+    }
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'en';
+        showLang(lang);
+    };
+</script>
+</head>
 <body>
 
 <div class="btn-group">
@@ -15,24 +49,24 @@
 
 <div id="ko" class="content-section">
     <h1>개인정보 처리방침 (1OX)</h1>
-    <p><strong>시행일:</strong> 2026-02-17</p>
-    <h2>1. 수집하는 개인정보 항목</h2>
+    <p><strong>시행일:</strong> 2026년 2월 17일</p>
+    <h2>1. 수집 항목 및 방법</h2>
     <ul>
-        <li>Google/게스트 로그인 식별 정보.</li>
-        <li><strong>인앱 결제:</strong> 구매 영수증 및 주문 번호. (금융 정보 직접 수집 안 함)</li>
-        <li>광고 식별자 및 서비스 이용 기록.</li>
+        <li>Google 로그인(식별 ID, 닉네임) 또는 게스트 로그인(기기 고유 ID).</li>
+        <li><strong>인앱 결제:</strong> 유료 아이템(광고 제거 등) 구매 시 영수증 및 주문 번호. <span class="highlight">금융 정보는 직접 수집하지 않습니다.</span></li>
+        <li><strong>광고 및 통계:</strong> 광고 식별자(ADID/IDFA) 및 이용 기록.</li>
     </ul>
     <h2>2. 이용 목적</h2>
-    <p>계정 관리, 유료 콘텐츠 지급 및 광고 제거 권한 관리, 글로벌 랭킹, 통계 분석.</p>
+    <p>계정 관리, 유료 콘텐츠 지급 및 광고 제거 권한 관리, 글로벌 랭킹 서비스 운영, 통계 분석.</p>
     <h2>3. 제3자 서비스</h2>
     <ul>
-        <li>Google Play: <a href="https://policies.google.com/privacy" target="_blank">방침</a></li>
-        <li>Unity: <a href="https://unity3d.com/legal/privacy-policy" target="_blank">방침</a></li>
+        <li>Google Play Services: <a href="https://policies.google.com/privacy" target="_blank">방침 보기</a></li>
+        <li>Unity Ads / Analytics: <a href="https://unity3d.com/legal/privacy-policy" target="_blank">방침 보기</a></li>
     </ul>
     <h2>4. 파기 및 데이터 삭제</h2>
-    <p>삭제 시 유료 아이템 정보를 포함한 모든 데이터를 30일 이내에 영구 삭제합니다.</p>
-    <h2>5. 아동 보호</h2>
-    <p>만 13세 미만 아동 정보를 고의로 수집하지 않습니다.</p>
+    <p>삭제 요청 시 30일 이내에 유료 아이템 정보를 포함한 모든 데이터를 영구 파기합니다.</p>
+    <h2>5. 아동 보호 정책</h2>
+    <p>당사는 만 13세 미만 아동의 정보를 고의로 수집하지 않습니다.</p>
     <h2>6. 문의</h2>
     <p>vignettemanager@gmail.com</p>
 </div>
@@ -42,19 +76,102 @@
     <p><strong>Effective Date:</strong> Feb 17, 2026</p>
     <h2>1. Information We Collect</h2>
     <ul>
-        <li>Google/Guest Sign-in ID.</li>
-        <li><strong>In-App Purchases:</strong> Order IDs and Receipts. (No financial data stored)</li>
-        <li>Advertising Identifiers and usage logs.</li>
+        <li>Google ID & Nickname, or Unique Guest ID.</li>
+        <li><strong>In-App Purchases:</strong> Order IDs and Receipts. <span class="highlight">We do not store financial data.</span></li>
+        <li>Advertising Identifiers (ADID/IDFA) and usage logs.</li>
     </ul>
     <h2>2. Purpose of Use</h2>
     <p>Account management, Managing paid items/Ad-free permissions, Leaderboards, Analytics.</p>
     <h2>3. Third-Party Services</h2>
-    <p>Google Play Services and Unity Analytics/Ads.</p>
+    <ul>
+        <li>Google Play: <a href="https://policies.google.com/privacy" target="_blank">Policy</a></li>
+        <li>Unity: <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Policy</a></li>
+    </ul>
     <h2>4. Data Deletion</h2>
-    <p>All data including purchase info will be deleted within 30 days upon request.</p>
+    <p>Data will be permanently deleted within 30 days upon request.</p>
     <h2>5. Children's Privacy</h2>
-    <p>We do not knowingly collect info from children under 13.</p>
-    <h2>6. Contact</h2>
+    <p>We do not knowingly collect information from children under 13.</p>
+    <h2>6. Contact Us</h2>
+    <p>vignettemanager@gmail.com</p>
+</div>
+
+<div id="ja" class="content-section">
+    <h1>プライバシーポリシー (1OX)</h1>
+    <h2>1. 収集する情報</h2>
+    <ul>
+        <li>Googleログインまたはゲストログイン識別子。</li>
+        <li><strong>アプリ内課金:</strong> 広告削除やアイテム購入時の注文番号。<span class="highlight">金融情報は収集しません。</span></li>
+        <li>広告識別子(ADID/IDFA)および統計データ。</li>
+    </ul>
+    <h2>2. 利用目的</h2>
+    <p>アカウント管理、有料コンテンツおよび広告削除権限の管理、ランキング、統計分析。</p>
+    <h2>3. 第三者サービス</h2>
+    <p>Google PlayおよびUnityの公式ポリシーをご参照ください。</p>
+    <h2>4. データの削除</h2>
+    <p>依頼後30日以内にすべてのデータを永久に削除します。</p>
+    <h2>5. 児童保護</h2>
+    <p>13歳未満の児童の個人情報は収集しません。</p>
+    <h2>6. お問い合わせ</h2>
+    <p>vignettemanager@gmail.com</p>
+</div>
+
+<div id="tw" class="content-section">
+    <h1>隱私權政策 (1OX)</h1>
+    <h2>1. 收集項目</h2>
+    <ul>
+        <li>Google 帳號唯一 ID、暱稱、賓客 ID。</li>
+        <li><strong>內購項目:</strong> 處理廣告移除或道具時的訂單編號。<span class="highlight">不直接收集信用卡資訊。</span></li>
+        <li>廣告識別碼(ADID)及服務利用紀錄。</li>
+    </ul>
+    <h2>2. 利用目的</h2>
+    <p>帳號管理、付費內容及移除廣告權限管理、排行榜、數據分析。</p>
+    <h2>3. 第三方服務</h2>
+    <p>詳情請參閱 Google 與 Unity 官方隱私政策連結。</p>
+    <h2>4. 數據刪除</h2>
+    <p>收到申請後 30 日內永久刪除所有相關數據。</p>
+    <h2>5. 兒童保護</h2>
+    <p>我們不收集 13 歲以下兒童的個人資訊。</p>
+    <h2>6. 聯繫我們</h2>
+    <p>vignettemanager@gmail.com</p>
+</div>
+
+<div id="cn" class="content-section">
+    <h1>隐私政策 (1OX)</h1>
+    <h2>1. 收集项目</h2>
+    <ul>
+        <li>Google 账户唯一 ID、昵称、游客 ID。</li>
+        <li><strong>内购项目:</strong> 处理广告移除或道具时的订单编号。<span class="highlight">不直接收集信用卡信息。</span></li>
+        <li>广告识别码(ADID)及服务利用纪录。</li>
+    </ul>
+    <h2>2. 利用目的</h2>
+    <p>账号管理、付费内容及移除广告权限管理、排行榜、数据分析。</p>
+    <h2>3. 第三方服务</h2>
+    <p>详情请参阅 Google 与 Unity 官方隐私政策链接。</p>
+    <h2>4. 数据删除</h2>
+    <p>收到申请后 30 日内永久删除所有相关数据。</p>
+    <h2>5. 儿童保护</h2>
+    <p>我们不收集 13 岁以下儿童的个人信息。</p>
+    <h2>6. 联系我们</h2>
+    <p>vignettemanager@gmail.com</p>
+</div>
+
+<div id="es" class="content-section">
+    <h1>Política de Privacidad (1OX)</h1>
+    <h2>1. Información recopilada</h2>
+    <ul>
+        <li>ID de Google, apodo, o ID de invitado único.</li>
+        <li><strong>Compras:</strong> Identificadores de pedido para eliminación de anuncios.<span class="highlight">No almacenamos datos financieros.</span></li>
+        <li>Identificadores de anuncios (ADID) y datos de uso.</li>
+    </ul>
+    <h2>2. Propósito de uso</h2>
+    <p>Gestión de cuenta, entrega de contenido pagado, clasificación global, análisis estadístico.</p>
+    <h2>3. Servicios de terceros</h2>
+    <p>Consulte las políticas de Google Play y Unity en sus sitios oficiales.</p>
+    <h2>4. Eliminación de datos</h2>
+    <p>Los datos se eliminarán permanentemente en un plazo de 30 días tras la solicitud.</p>
+    <h2>5. Protección de menores</h2>
+    <p>No recopilamos información de menores de 13 años.</p>
+    <h2>6. Contacto</h2>
     <p>vignettemanager@gmail.com</p>
 </div>
 
