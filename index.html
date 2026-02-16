@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1OX - Vignette Studio</title>
+<style>
+    body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; text-align: center; }
+    h1 { margin-top: 40px; margin-bottom: 10px; color: #222; }
+    .slogan { color: #666; font-style: italic; margin-bottom: 30px; }
+    .btn-group { margin-bottom: 40px; }
+    .btn { display: inline-block; padding: 8px 16px; margin: 4px; border: 1px solid #ddd; border-radius: 20px; cursor: pointer; background-color: #f9f9f9; color: #555; font-weight: bold; text-decoration: none; transition: 0.2s; }
+    .btn:hover { background-color: #eee; }
+    .btn.active { background-color: #007bff !important; color: white !important; border-color: #007bff !important; }
+    .game-img { max-width: 100%; height: auto; max-height: 600px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px 0; }
+    .content-section { display: none; text-align: left; }
+    .game-header { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+    ul { margin-bottom: 30px; }
+    li { margin-bottom: 10px; }
+    .footer-links { margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9em; text-align: center; }
+    a { color: #007bff; text-decoration: none; }
+</style>
+<script>
+    function showLang(langId) {
+        var contents = document.getElementsByClassName('content-section');
+        for (var i = 0; i < contents.length; i++) { contents[i].style.display = 'none'; }
+        var buttons = document.getElementsByClassName('btn');
+        for (var i = 0; i < buttons.length; i++) { buttons[i].classList.remove('active'); }
+        document.getElementById(langId).style.display = 'block';
+        document.getElementById('btn-' + langId).classList.add('active');
+    }
+    window.onload = function() { showLang('en'); };
+</script>
+</head>
+<body>
+
+<div class="btn-group">
+    <a id="btn-en" class="btn active" onclick="showLang('en')">English</a>
+    <a id="btn-ko" class="btn" onclick="showLang('ko')">한국어</a>
+    <a id="btn-ja" class="btn" onclick="showLang('ja')">日本語</a>
+    <a id="btn-tw" class="btn" onclick="showLang('tw')">繁體中文</a>
+    <a id="btn-cn" class="btn" onclick="showLang('cn')">简体中文</a>
+    <a id="btn-es" class="btn" onclick="showLang('es')">Español</a>
+</div>
+
+<div id="en" class="content-section">
+    <div style="text-align: center;"><h1>1OX 🎬</h1><p class="slogan">"The ultimate brain challenge through quizzes."</p></div>
+    <h2 class="game-header">🎮 Project: 1OX</h2>
+    <p>A mobile quiz game where you can challenge yourself with diverse categories and compete globally.</p>
+    <ul><li>🧩 <strong>Smart Quizzes:</strong> Wide range of topics.</li><li>🏆 <strong>Rankings:</strong> Global competition.</li></ul>
+    <div class="footer-links">Contact: vignettemanager@gmail.com | <a href="PRIVACY.html">Privacy Policy</a></div>
+</div>
+
+<div id="ko" class="content-section">
+    <div style="text-align: center;"><h1>1OX 🎬</h1><p class="slogan">"퀴즈로 즐기는 최고의 두뇌 챌린지"</p></div>
+    <h2 class="game-header">🎮 프로젝트: 1OX</h2>
+    <p>다양한 카테고리의 퀴즈를 풀고 전 세계 유저와 경쟁하는 모바일 퀴즈 게임입니다.</p>
+    <ul><li>🧩 <strong>스마트 퀴즈:</strong> 다양한 주제의 흥미로운 퀴즈</li><li>🏆 <strong>랭킹 시스템:</strong> 글로벌 유저와의 순위 경쟁</li></ul>
+    <div class="footer-links">문의: vignettemanager@gmail.com | <a href="PRIVACY.html">개인정보 처리방침</a></div>
+</div>
+
+</body>
+</html>
