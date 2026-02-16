@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1OX - Vignette Studio</title>
+<title>Vignette Studio</title>
 <style>
     body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; text-align: center; }
     h1 { margin-top: 40px; margin-bottom: 10px; color: #222; }
@@ -26,8 +26,10 @@
         for (var i = 0; i < contents.length; i++) { contents[i].style.display = 'none'; }
         var buttons = document.getElementsByClassName('btn');
         for (var i = 0; i < buttons.length; i++) { buttons[i].classList.remove('active'); }
-        document.getElementById(langId).style.display = 'block';
-        document.getElementById('btn-' + langId).classList.add('active');
+        var targetContent = document.getElementById(langId);
+        var targetButton = document.getElementById('btn-' + langId);
+        if (targetContent) targetContent.style.display = 'block';
+        if (targetButton) targetButton.classList.add('active');
     }
     window.onload = function() { showLang('en'); };
 </script>
@@ -44,18 +46,46 @@
 </div>
 
 <div id="en" class="content-section">
-    <div style="text-align: center;"><h1>1OX 🎬</h1><p class="slogan">"The ultimate brain challenge through quizzes."</p></div>
-    <h2 class="game-header">🎮 Project: 1OX</h2>
-    <p>A mobile quiz game where you can challenge yourself with diverse categories and compete globally.</p>
-    <ul><li>🧩 <strong>Smart Quizzes:</strong> Wide range of topics.</li><li>🏆 <strong>Rankings:</strong> Global competition.</li></ul>
+    <div style="text-align: center;">
+        <h1>Welcome to Vignette Studio</h1>
+        <p class="slogan">"Small scenes make memorable stories."</p>
+        <img src="intrologo.png" class="game-img" alt="Gameplay">
+    </div>
+
+    <h2 class="game-header">🎮 Our Project: Block Bomb
+        <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a>
+    </h2>
+    <p>Strategic explosions on a chessboard! Place blocks and challenge your high score.</p>
+
+    <h2 class="game-header">🎮 Our Project: 1OX</h2>
+    <p>The ultimate quiz challenge! Test your knowledge across various categories and compete globally.</p>
+    <ul>
+        <li>🧩 <strong>Smart Quizzes:</strong> Engaging questions on Brain, Daily, Food, and more.</li>
+        <li>🏆 <strong>Rankings:</strong> Compare scores with players worldwide.</li>
+    </ul>
+
     <div class="footer-links">Contact: vignettemanager@gmail.com | <a href="PRIVACY.html">Privacy Policy</a></div>
 </div>
 
 <div id="ko" class="content-section">
-    <div style="text-align: center;"><h1>1OX 🎬</h1><p class="slogan">"퀴즈로 즐기는 최고의 두뇌 챌린지"</p></div>
+    <div style="text-align: center;">
+        <h1>Vignette Studio에 오신 것을 환영합니다</h1>
+        <p class="slogan">"작은 장면 하나하나가 모여 기억에 남는 이야기를 만듭니다."</p>
+        <img src="intrologo.png" class="game-img" alt="Gameplay">
+    </div>
+
+    <h2 class="game-header">🎮 프로젝트: 블록밤 (Block Bomb)
+        <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a>
+    </h2>
+    <p>체스보드 위에서 펼쳐지는 전략적인 폭발! 블록을 배치하고 최고 점수에 도전하세요.</p>
+
     <h2 class="game-header">🎮 프로젝트: 1OX</h2>
-    <p>다양한 카테고리의 퀴즈를 풀고 전 세계 유저와 경쟁하는 모바일 퀴즈 게임입니다.</p>
-    <ul><li>🧩 <strong>스마트 퀴즈:</strong> 다양한 주제의 흥미로운 퀴즈</li><li>🏆 <strong>랭킹 시스템:</strong> 글로벌 유저와의 순위 경쟁</li></ul>
+    <p>최고의 두뇌 챌린지 퀴즈! 다양한 카테고리의 문제를 풀며 전 세계 유저와 경쟁하세요.</p>
+    <ul>
+        <li>🧩 <strong>스마트 퀴즈:</strong> 상식, 브레인, 일상 등 다채로운 주제</li>
+        <li>🏆 <strong>글로벌 랭킹:</strong> 전 세계 플레이어와 순위 경쟁</li>
+    </ul>
+
     <div class="footer-links">문의: vignettemanager@gmail.com | <a href="PRIVACY.html">개인정보 처리방침</a></div>
 </div>
 
