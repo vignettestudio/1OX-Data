@@ -8,16 +8,62 @@
     /* 전체 스타일 */
     body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; text-align: center; }
     
-    /* 로고/제목 스타일 */
-    h1 { margin-top: 40px; margin-bottom: 10px; color: #222; }
+    /* 로고/제목 스타일 - 변경된 부분: margin-top을 10px로 줄여 버튼과의 간격을 최적화했습니다. */
+    h1 { margin-top: 10px; margin-bottom: 10px; color: #222; }
     .slogan { color: #666; font-style: italic; margin-bottom: 30px; }
     
-    /* 버튼 그룹 */
-    .btn-group { margin-bottom: 40px; }
+    /* 추가된 부분: 페이드 효과를 위한 감싸는 박스 */
+    .scroll-container {
+        position: relative;
+        margin-bottom: 20px; /* 기존 40px에서 줄여 제목과의 간격을 맞춤 */
+        overflow: hidden;
+    }
+
+    /* 추가된 부분: 양쪽 페이드(그라데이션) 효과 */
+    .scroll-container::before,
+    .scroll-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 40px;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+    .scroll-container::before {
+        left: 0;
+        background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+    }
+    .scroll-container::after {
+        right: 0;
+        background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+    }
+
+    /* 변경된 부분: 가로 스크롤 적용 및 페이드 여백 추가 */
+    .btn-group { 
+        display: flex; 
+        overflow-x: auto; 
+        white-space: nowrap; 
+        gap: 10px; 
+        padding: 10px 20px; /* 양옆 페이드 공간 확보 */
+        -webkit-overflow-scrolling: touch; 
+    }
+    
+    /* 모바일에서 스크롤바 숨기기 */
+    .btn-group::-webkit-scrollbar { display: none; }
+
+    /* PC 등 넓은 화면에서는 중앙 정렬 유지 및 페이드 제거 */
+    @media (min-width: 650px) {
+        .btn-group { justify-content: center; }
+        .scroll-container::before, .scroll-container::after { display: none; }
+    }
+
+    /* 변경된 부분: flex-shrink 속성 추가로 버튼 찌그러짐 방지 */
     .btn { 
-        display: inline-block; padding: 8px 16px; margin: 4px; 
+        display: inline-block; padding: 8px 16px; 
         border: 1px solid #ddd; border-radius: 20px; cursor: pointer; 
         background-color: #f9f9f9; color: #555; font-weight: bold; text-decoration: none; transition: 0.2s;
+        flex-shrink: 0;
     }
     .btn:hover { background-color: #eee; }
     .btn.active { background-color: #007bff !important; color: white !important; border-color: #007bff !important; }
@@ -68,14 +114,10 @@
 </head>
 <body>
 
-<div class="btn-group">
-    <a id="btn-en" class="btn active" onclick="showLang('en')">English</a>
-    <a id="btn-ko" class="btn" onclick="showLang('ko')">한국어</a>
-    <a id="btn-ja" class="btn" onclick="showLang('ja')">日本語</a>
-    <a id="btn-tw" class="btn" onclick="showLang('tw')">繁體中文</a>
-    <a id="btn-cn" class="btn" onclick="showLang('cn')">简体中文</a>
-    <a id="btn-es" class="btn" onclick="showLang('es')">Español</a>
-</div>
+<div class="scroll-container">
+    <div class="btn-group">
+        <a id="btn-en" class="btn active" onclick="showLang('en')">English</a>
+        <a id="btn-ko" class="btn"
 
 <div id="en" class="content-section">
     <div style="text-align: center;">
